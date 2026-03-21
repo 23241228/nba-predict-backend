@@ -47,3 +47,6 @@ async def get_today_games():
         return {"error": str(e), "data": []}
     
     return {"data": []}
+    # Netlify 适配
+from mangum import Mangum
+handler = Mangum(app)
